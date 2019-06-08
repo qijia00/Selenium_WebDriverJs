@@ -9,3 +9,6 @@ https://github.com/seleniumHQ/selenium/wiki/WebDriverJs
 
 ## Selenium JavaScript documentation
 https://seleniumhq.github.io/selenium/docs/api/javascript/index.html
+
+## Youtube tutorial
+https://www.youtube.com/playlist?list=PLA4JPGpQHctT__mDO9EHvOrWVW0Hkf5Mk
