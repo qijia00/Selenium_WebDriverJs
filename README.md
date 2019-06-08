@@ -9,7 +9,7 @@ https://github.com/seleniumHQ/selenium/wiki/WebDriverJs
 
 ## Selenium JavaScript documentation
 https://seleniumhq.github.io/selenium/docs/api/javascript/index.html
-Create drivers folder at the same level of your js files to store chrome, firefox drivers.
+Create drivers folder at the same level of your js files to store chrome, firefox drivers, and add the drivers folder to system PATH.
 
 ## Youtube tutorial
 https://www.youtube.com/playlist?list=PLA4JPGpQHctT__mDO9EHvOrWVW0Hkf5Mk
