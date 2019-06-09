@@ -17,7 +17,15 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
   // use await to make sure it is fully build before js is going to run the next line
   try {
     // tryCode - Block of code to try
-    await driver.get('http://www.google.com/ncr');
+    await driver.get('https://housepricehub.com/');
+    // search field
+    await driver.findElement(By.css('input')).then(function(el){
+      console.log("success " + el);
+    });
+    // top menu items
+    await driver.findElements(By.css('#app .top-menu-wrap:nth-of-type(1) .top-menu a')).then(function(array){
+      console.log("found the elements you wanted " + array);
+    });
   } finally {
     // finallyCode - Block of code to be executed regardless of the try / catch result
     await driver.quit();
