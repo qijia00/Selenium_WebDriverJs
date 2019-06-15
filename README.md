@@ -15,4 +15,4 @@ Create drivers folder at the same level of your js files to store chrome, firefo
 https://www.youtube.com/playlist?list=PLA4JPGpQHctT__mDO9EHvOrWVW0Hkf5Mk
 
 ## To execute:
-from powershell, under the directory has the xx.js file, do "node xx.js".
+from powershell, under the directory has the xyz.js file, do "node xyz.js".
