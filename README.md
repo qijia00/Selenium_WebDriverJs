@@ -16,4 +16,5 @@ Learning Webdriver JS: https://www.youtube.com/playlist?list=PLA4JPGpQHctT__mDO9
 Callbacks, Promises, Async Await: https://www.youtube.com/watch?v=PoRJizFvM7s
 
 ## To execute:
-from powershell, under the directory has the xyz.js file, do "node xyz.js".
+from PowerShell, under the directory has the xyz.js file, do "node xyz.js".
+from VSCode, click Debug button to execute or debug, or run in VSCode terminal (same as run from PowerShell).
