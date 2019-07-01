@@ -12,9 +12,12 @@ https://seleniumhq.github.io/selenium/docs/api/javascript/index.html
 Create drivers folder at the same level of your js files to store chrome, firefox drivers, and add the drivers folder to system PATH.
 
 ## Youtube tutorial
-Learning Webdriver JS: https://www.youtube.com/playlist?list=PLA4JPGpQHctT__mDO9EHvOrWVW0Hkf5Mk
-Callbacks, Promises, Async Await: https://www.youtube.com/watch?v=PoRJizFvM7s
+
+ - Learning Webdriver JS:
+   https://www.youtube.com/playlist?list=PLA4JPGpQHctT__mDO9EHvOrWVW0Hkf5Mk
+- Callbacks, Promises, Async Await:
+   https://www.youtube.com/watch?v=PoRJizFvM7s
 
 ## To execute:
-from PowerShell, under the directory has the xyz.js file, do "node xyz.js".
-from VSCode, click Debug button to execute or debug, or run in VSCode terminal (same as run from PowerShell).
+- from PowerShell, under the directory has the xyz.js file, do "node xyz.js".
+- from VSCode, click Debug button to execute or debug, or run in VSCode terminal (same as run from PowerShell).
