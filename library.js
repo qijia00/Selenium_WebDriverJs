@@ -23,7 +23,9 @@ async function test() {
   try {
     // tryCode - Block of code to try
     await driver.get('https://housepricehub.com/');
+    // when using async await funtion then no need of selenium implicit wait: driver.manage().timeout().implicitlyWait(1000).
 
+    //  ======= findElement and getText =======
     // search field
     // ES2015: promises:
     // use ".then" function from Javascript promises to pass in the placeholder text to log it in the console
@@ -33,7 +35,7 @@ async function test() {
     // });
     // ES2017: async/await:
     // findElement is a promise (take time to return).
-    const element = await driver.findElement(By.css('input')); 
+    let element = await driver.findElement(By.css('input')); 
     if (element) {
       const txt = await element.getAttribute("placeholder");
       // if you see promise in the print out, such as "The text is [object Promise]"", then you must missed an await.
@@ -44,6 +46,7 @@ async function test() {
       exit;
     }
 
+    //  ======= findElementS and getText =======
     // top menu items - find multiple Elements at once
     // await driver.findElements(By.css('#app .top-menu-wrap:nth-of-type(1) .top-menu a')).then(function(array){
     //   console.log("found the elements you wanted: " + array);
@@ -63,6 +66,19 @@ async function test() {
       console.log("The text of the top menu item element is: " + txt);
     }
 
+    //  ======= SendKeys and Click =======
+    await driver.findElement(By.css('input')).sendKeys('Markham');
+    await driver.findElement(By.css('.input-group button')).click();
+    // when using async await funtion then no need of selenium explicit wait: driver.wait(until.elementLocated(By.css('h1')), 1000)
+    element = await driver.findElement(By.css('h1'));
+    if (element) {
+      const txt = await element.getText();
+      console.log("The text of the search result page is: " + txt);
+    } else {
+      console.log("The serach result page is not launched properly!");
+      exit;
+    }
+    
   } finally {
     // finallyCode - Block of code to be executed regardless of the try / catch result
     await driver.quit();
