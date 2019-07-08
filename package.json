@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "moncha_test": "node_modules/.bin/mocha 01Moncha.js --timeout 20000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mocha": "^6.1.4",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }
