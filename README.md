@@ -23,4 +23,6 @@ Create drivers folder at the same level of your js files to store chrome, firefo
    - from PowerShell, under the directory has the 00AsyncAwait.js file, do "node 00AsyncAwait.js".
    - from VSCode, click Debug button to execute or debug, or run in VSCode terminal (same as run from PowerShell).
 - To run 01Moncha.js:
-   - from VSCode, View - Terminal, from the directory that has 01Moncha.js file, do "npm run moncha_test" (moncha_test is defined in package.json file with 2 seconds time out).
+   - from VSCode, View - Terminal, from the directory that has 01Moncha.js file, do "npm run mocha_test" (mocha_test is defined in package.json file with 2 seconds time out).
+- To run all the tests under test_suites folder:
+   - from VSCode, View - Terminal, from the directory that has the test_suites folder, do "mocha test_suites --reporter mochawesome" (the 2 seconds Mocha timeout needs to be defined in each of the .js files; mochawesome needs to be installed globally).

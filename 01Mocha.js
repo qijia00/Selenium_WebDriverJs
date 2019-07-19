@@ -1,5 +1,6 @@
 const {By, Key, until} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
+const assert = require('assert');
 
 //The default timeout for a test suite in Mocha is 2 seconds, 
 //which is most likely not enough for Selenium tests.
@@ -22,6 +23,7 @@ suite(function(env) {
         if (element) {
           const txt = await element.getAttribute("placeholder");
           console.log("The text is " + txt);
+          assert(txt === 'Find Your House', txt + " was returned, but Find Your House is expected.");
         }
         else {
           console.log('Can not find the element');
@@ -31,9 +33,12 @@ suite(function(env) {
 
       it('findElementS and getText', async function() {
         const elements = await driver.findElements(By.css('#app .top-menu-wrap:nth-of-type(1) .top-menu a'));
+        const expected_elements = ['Home','Compare','Top 100','Latest','Areas','Cities']
         for (const element of elements) {
           const txt = await element.getText();
           console.log("The text of the top menu item element is: " + txt);
+          assert(expected_elements.indexOf(txt) !== -1);
+          expected_elements.splice(expected_elements.indexOf(txt), 1);
         }
       });
 
@@ -44,6 +49,7 @@ suite(function(env) {
         if (element) {
           const txt = await element.getText();
           console.log("The text of the search result page is: " + txt);
+          assert(txt === 'Search Results for: Markham', txt + " was returned, but Search Results for: Markham is expected.");
         } else {
           console.log("The serach result page is not launched properly!");
           exit;

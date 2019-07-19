@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "moncha_test": "node_modules/.bin/mocha 01Moncha.js --timeout 20000"
+    "mocha_test": "node_modules/.bin/mocha 01Mocha.js --timeout 20000 --reporter mochawesome --reporter-options reportDir=test_results,reportFilename=01Moncha_test_result"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mocha": "^6.1.4",
     "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "mochawesome": "^4.0.1"
   }
 }
