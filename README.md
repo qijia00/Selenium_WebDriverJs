@@ -1,5 +1,5 @@
 # Selenium_WebDriverJs
-Sample script I created in WebDriverJS with Slenium.
+Sample scripts I created with Selenium WebDriverJS async/await functions. Tests are structured with Behaviour-Driven Development (BDD) layer which is manged by Mocha test framework with Test-driven development (TDD) assert style provided by Chai.
 
 ## What is WebDriverJS:
 WebDriverJs is the Official javascript implementation of selenium. ... It is written by selenium guys. Other tools like protractor depends on WebdriverJs to interact with browser. Webdriverjs is packaged as 'selenium-webdriver' under npm package which runs on nodejs.
