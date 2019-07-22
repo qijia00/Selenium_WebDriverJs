@@ -1,5 +1,7 @@
 const {By, Key, until} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
+// above may return multipl such as suite, describe, etc, so you need {}
+// below can only returns assert, so no need to add {}
 const assert = require('assert');
 
 //The default timeout for a test suite in Mocha is 2 seconds, 
@@ -11,7 +13,7 @@ suite(function(env) {
       let driver;
  
       before(async function() {
-        //Moncha will searching for WebDriver executables installed on the current system
+        //Moncha env will searching for WebDriver executables installed on the current system
         //If you have Chrome, Firefox etc. drivers installed, then Moncha will run cross browser testing.
         driver = await env.builder().build();
         await driver.get('https://housepricehub.com/');
